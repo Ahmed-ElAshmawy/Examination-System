@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/BigMaster.Master" AutoEventWireup="true" CodeBehind="Anonymous.master.cs" Inherits="ExamOnline.AdminMaster" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder_Menu" runat="server">
+     <div id="menu" style="padding-left:500px; z-index: 1; position: absolute; top: 200px; left: 0px; width: 548px;">
+    <ul>
+      <li><a href="/AnonymousProfile.aspx" >Home</a></li>
+      <li><a href="/ContactUs.aspx">Contact Us</a></li>
+    </ul></div>
+    
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder_Body" runat="server">
+     <div id="content_wrapper">
+  <div id="sidebar">
+    <div class="sidebar_box">
+  
+              <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LogIn</h2>
+        <p>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </p>
+    </div>
+      <div class="sidebar_box_bottom"></div>
+  
+  </div>
+  <!-- end of sidebar -->
+  <div id="content">
+    <div class="content_box">
+        
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder_Main" runat="server">
+            <p>
+            </p>
+        </asp:ContentPlaceHolder>
+      
+    </div>
+      <div class="content_box_bottom"></div>
+    
+  <!-- end of content -->
+  <div class="cleaner"></div>
+</div>
+     </div>
+    <div class="cleaner"></div>
+</asp:Content>

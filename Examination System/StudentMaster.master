@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/BigMaster.Master" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="ExamOnline.AdminMaster" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder_Menu" runat="server">
+         <div id="menu" style="padding-left:125px; z-index: 1; position: absolute; top: 201px; left: 0px; width: 933px;">
+   <ul style="width: 979px">
+      <li><a href="/Instructors Per Course - Copy.aspx" style="left: 56px; top: -3px; width: 194px">Instructor Per Course</a></li>
+      <li><a href="/Topic Per Course - Copy.aspx" style="left: 86px; top: -2px; width: 160px; height: 43px;">Topic per Course </a></li>
+         <li><a href="Student_Answers_After_generation.aspx" style="left: 114px; top: -2px; width: 134px">Exam Answers</a></li>
+      </ul>
+</div>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder_Body" runat="server">
+     <div id="content_wrapper">
+  <div id="sidebar">
+    <div class="sidebar_box">
+        
+          
+                <table style="width: 98%; height: 191px;">
+                    <tr>
+                        <td style="width: 42px">&nbsp;</td>
+                        <td style="width: 101px" class="profilepic">
+                            <asp:Image ID="Image_ProfilePic" runat="server" CssClass="profilepic" Height="88px" ImageUrl="~/images/Administrator.png" />
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 42px">Welcome:</td>
+                        <td style="width: 101px">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                                <p>
+                                    &nbsp;</p>
+                            </asp:ContentPlaceHolder>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 42px">Desc:</td>
+                        <td style="width: 101px">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 42px">&nbsp;</td>
+                        <td style="width: 101px">
+                            &nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 42px">&nbsp;</td>
+                        <td style="width: 101px">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                            </asp:ContentPlaceHolder>
+                            <br />
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    </table>
+            
+    </div>
+      <div class="sidebar_box_bottom"></div>
+      <div class="sidebar_box">
+      <h2>Important Links:</h2>
+         
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder_Links" runat="server">
+          </asp:ContentPlaceHolder>
+         
+    </div>
+    <div class="sidebar_box_bottom">
+
+
+    </div>
+  </div>
+  <!-- end of sidebar -->
+  <div id="content">
+    <div class="content_box">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder_Main" runat="server">
+            
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="content_box_bottom"></div>
+  <!-- end of content -->
+  <div class="cleaner"></div>
+</div>
+     </div>
+    <div class="cleaner"></div>
+</asp:Content>

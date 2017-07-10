@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/BigMaster.Master" AutoEventWireup="true" CodeBehind="AdminMaster.master.cs" Inherits="ExamOnline.AdminMaster" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder_Menu" runat="server">
+         <div id="menu" style="padding-left:125px; z-index: 1; position: absolute; top: 200px; left: 0px; width: 933px;">
+   <ul style="width: 979px">
+      <li><a href="/Specific Student.aspx" style="left: 0px; top: 0px; width: 170px">Specific Student Info</a></li>
+      <li><a href="/Course Per Student.aspx" style="left: 19px; top: -1px; width: 160px">Courses per Student </a></li>
+         <li><a href="/Student_result.aspx" style="left: 27px; top: -1px; width: 134px">Students results</a></li>
+     <li><a href="/Student_Exam_Answer.aspx" style="left: 49px; top: -1px; width: 154px">Student exam Info</a></li>
+     <li><a href="/Student_Ex.aspx" style="left: 55px; top: -1px; width: 202px">Student exams</a></li>
+      </ul>
+</div>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder_Body" runat="server">
+     <div id="content_wrapper">
+  <div id="sidebar">
+    <div class="sidebar_box">
+        
+          
+                <table style="width: 98%; height: 191px;">
+                    <tr>
+                        <td style="width: 42px">&nbsp;</td>
+                        <td style="width: 101px" class="profilepic">
+                            <asp:Image ID="Image_ProfilePic" runat="server" CssClass="profilepic" Height="88px" ImageUrl="~/images/Administrator.png" />
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 42px">Welcome:</td>
+                        <td style="width: 101px">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                                <p>
+                                    &nbsp;</p>
+                            </asp:ContentPlaceHolder>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 42px">Desc:</td>
+                        <td style="width: 101px">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 42px">&nbsp;</td>
+                        <td style="width: 101px">
+                            &nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 42px">&nbsp;</td>
+                        <td style="width: 101px">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                            </asp:ContentPlaceHolder>
+                            <br />
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    </table>
+            
+    </div>
+      <div class="sidebar_box_bottom"></div>
+      <div class="sidebar_box">
+      <h2>Important Links:</h2>
+         
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder_Links" runat="server">
+              <p>
+                  <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Corrective_ExamByCrs.aspx">Students have corrective exam by course</asp:HyperLink>
+              </p>
+              <p>
+                  <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/StudentCorectiveExamByDept.aspx">Students have corrective exam by dept</asp:HyperLink>
+              </p>
+              <p>
+                  <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Question_Courses.aspx">Questions By courses without model answer</asp:HyperLink>
+              </p>
+              <p>
+                  <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Update_Ins_Info.aspx">Update info</asp:HyperLink>
+              </p>
+          </asp:ContentPlaceHolder>
+         
+    </div>
+    <div class="sidebar_box_bottom">
+
+
+    </div>
+  </div>
+  <!-- end of sidebar -->
+  <div id="content">
+    <div class="content_box">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder_Main" runat="server">
+            
+        </asp:ContentPlaceHolder>
+    </div>
+    <div class="content_box_bottom"></div>
+  <!-- end of content -->
+  <div class="cleaner"></div>
+</div>
+     </div>
+    <div class="cleaner"></div>
+</asp:Content>
